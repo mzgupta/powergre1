@@ -1,0 +1,37 @@
+nav.sidebar {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background-color:#E5E5E5;
+  margin-top:60px; 
+  z-index: 2000;
+  .icon {
+    font-size: 24px;
+    color:    
+  } 
+  ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    li {
+      padding: 5px 10px;
+      margin: 10px 0px;
+      cursor: pointer;            
+    }
+    a {
+      color: $link-color;
+      text-decoration: none;
+
+      &:hover {
+        color: $link-hover-color;
+        text-decoration: underline;
+      }
+      &.active{
+        color: $link-hover-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<div class="container-fluid">
+  {{#each model}}
+    <div class="col-md-2">
+      <div class="set" {{action 'explore' this}}>
+          Set {{id}}
+      </div>
+    </div>
+  {{/each}}
+</div>

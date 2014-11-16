@@ -1,0 +1,11 @@
+<div {{bind-attr class=":card isFlipped:flipped"}} {{action 'flip'}}>
+    <div class="face front bg-primary">
+        {{word.name}}
+    </div>
+
+    <div class="face back bg-primary">
+        <p>
+        {{word.meaning}}
+        </p>
+    </div>
+</div>
