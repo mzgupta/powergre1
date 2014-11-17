@@ -11,6 +11,9 @@ Router.map(function() {
   this.resource('discover', { path: '/wordlist/:id' }, function () {
       this.route('study', { path: '' });
       this.route('multiplechoice', { path: '/multiplechoice'});
+      this.route('reversechoice', { path: '/reversechoice'});
+      this.route('hot-target', { path: '/hottarget'});
+      this.route('dragndrop', { path: '/dragndrop'});
   });
 });
 

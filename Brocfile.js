@@ -4,7 +4,6 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp();
 
-var pickFiles = require('broccoli-static-compiler');
 
 
 // Use `app.import` to add additional libraries to the generated
@@ -20,5 +19,17 @@ var pickFiles = require('broccoli-static-compiler');
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+app.import('bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot', {
+    destDir: 'fonts'
+});
+app.import('bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg', {
+    destDir: 'fonts'
+});
+app.import('bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf', {
+    destDir: 'fonts'
+});
+app.import('bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff', {
+    destDir: 'fonts'
+}); 
 
-module.exports = app.toTree()
+module.exports = app.toTree();

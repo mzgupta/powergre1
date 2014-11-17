@@ -1,11 +1,12 @@
 <div {{bind-attr class=":card isFlipped:flipped"}} {{action 'flip'}}>
-    <div class="face front bg-primary">
+    <div class="face front">
         {{word.name}}
     </div>
 
-    <div class="face back bg-primary">
+    <div class="face back">
+        <h3>{{word.meaning}}</h3>
         <p>
-        {{word.meaning}}
+        {{word.description}}
         </p>
     </div>
 </div>

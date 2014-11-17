@@ -24,8 +24,19 @@ var Word = Ember.Object.extend({
    * @property meaning
    * @type String
   */
-   meaning:null
+   meaning:null,
 
+  /**
+   * @property synonyms
+   * @type String
+  */
+   synonyms:null,
+
+  /**
+   * @property description
+   * @type String
+  */
+   description:null
 
 });
 
