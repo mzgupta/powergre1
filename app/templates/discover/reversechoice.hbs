@@ -1,9 +1,7 @@
-<div id="multiplechoice-tmpl">
-    <div class="row center-block height-500 width-800">
-        {{choice-card options=options question=word reverse=true}}
-    </div>
-    <div class="row center-block height-50 width-800 navigation">
-        <button type="button" class="btn btn-link f-25" {{action 'previous'}}>Previous</button>
-        <button type="button" class="btn btn-link f-25" {{action 'next'}}>Next</button>
-    </div>
+<div class="row center-block card-layout height-500 width-800">
+    {{choice-card options=options question=word reverse=true}}
 </div>
+
+{{partial "layout/navigation"}}
+
+

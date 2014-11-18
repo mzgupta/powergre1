@@ -1,9 +1,10 @@
-<div class="container-fluid">
-  {{#each model}}
-    <div class="col-md-2 mb-15">
-      <div class="set" {{action 'explore' this}}>
-          Set {{id}}
-      </div>
+{{#each model}}
+<div class="col-md-2 h-200 card-layout m-10 clickable" {{action 'explore' this}}>
+    <div class='col top'>
+        <h3>Set</h3>
     </div>
-  {{/each}}
+    <div class='col bottom'>
+        <h3>{{id}}</h3>
+    </div>
 </div>
+{{/each}}
