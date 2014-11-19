@@ -9,7 +9,7 @@ Router.map(function() {
   this.route('wordlist');
   this.route('discover');
   this.resource('discover', { path: '/wordlist/:id' }, function () {
-      this.route('study', { path: '' });
+      this.route('study', { path: '/study' });
       this.route('multiplechoice', { path: '/multiplechoice'});
       this.route('reversechoice', { path: '/reversechoice'});
       this.route('hot-target', { path: '/hottarget'});

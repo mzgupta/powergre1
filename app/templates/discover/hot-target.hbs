@@ -1,4 +1,5 @@
-<div class="row center-block f-18 w-1000">
+<div class="row">
+  <div class="center-block f-18 w-1000 position-relative">
   {{#each hotWord in hotWords itemController="discover/word"}}
      {{#with hotWord}}
       <div class="col-md-4 mb-15">
@@ -12,8 +13,6 @@
       </div>
        {{/with}}
   {{/each}}
-</div>
-<div class="row center-block height-50 width-800 navigation">
-    <button type="button" class="btn btn-link f-25" {{action 'previous'}}>Previous</button>
-    <button type="button" class="btn btn-link f-25" {{action 'next'}}>Next</button>
+  {{partial "layout/navigation"}}
+  </div>
 </div>

@@ -1,16 +1,18 @@
-<div class="row center-block f-20">
-  {{#each hotWord in hotWords itemController="discover/word"}}
-     {{#with hotWord}}
-      <div class="col-md-6 mb-15">
-        <div {{bind-attr class=":set highlight:highlight hide:invisible"}}{{action 'hotSelect'}}>
-          {{#if hotWord.model.flip}}
-              {{hotWord.model.word.name}}
-          {{else}}
-              {{hotWord.model.word.meaning}}
-          {{/if}}
+<div class="row">
+  <div class="center-block position-relative w-1000 f-20">
+    {{#each hotWord in hotWords itemController="discover/word"}}
+       {{#with hotWord}}
+        <div class="col-md-6 mb-15">
+          <div {{bind-attr class=":set highlight:highlight hide:invisible"}}{{action 'hotSelect'}}>
+            {{#if hotWord.model.flip}}
+                {{hotWord.model.word.name}}
+            {{else}}
+                {{hotWord.model.word.meaning}}
+            {{/if}}
+          </div>
         </div>
-      </div>
-       {{/with}}
-  {{/each}}
+         {{/with}}
+    {{/each}}
+  {{partial "layout/navigation"}}
+  </div>
 </div>
-{{partial "layout/navigation"}}

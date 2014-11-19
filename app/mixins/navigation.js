@@ -28,6 +28,9 @@ export default Ember.Mixin.create({
 
     _isValidRange : function(newIndex){
         var range = this.get('range');
+        if(newIndex > range.end) {
+            this.transitionTo('discover.index'); 
+        }
         return (newIndex >= range.start) && (newIndex <= range.end);
     },
 
