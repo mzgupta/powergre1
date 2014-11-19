@@ -1,8 +1,8 @@
 {{#if reverse}}
     <h1>{{question.meaning}}</h1>
     <form role="form">
-        <h1>
-            <i {{bind-attr class=":glyphicon isCorrect:glyphicon-ok:glyphicon-remove showResult:show:hide"}}></i>
+        <h1 class="result-icon">
+            <i {{bind-attr class=":glyphicon isCorrect:c-green:c-red isCorrect:glyphicon-ok:glyphicon-remove showResult:show:hide"}}></i>
         </h1>
         <div class="radio">
           <label> 
@@ -36,8 +36,8 @@
 {{else}}
     <h1>{{question.name}}</h1>
     <form role="form">
-        <h1>
-            <i {{bind-attr class=":glyphicon isCorrect:glyphicon-ok:glyphicon-remove showResult:show:hide"}}></i>
+        <h1 class="result-icon">
+            <i {{bind-attr class=":glyphicon isCorrect:c-green:c-red isCorrect:glyphicon-ok:glyphicon-remove showResult:show:hide"}}></i>
         </h1>
         <div class="radio">
           <label> 
