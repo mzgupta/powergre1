@@ -1,9 +1,14 @@
-<div class="row center-block card-layout height-500 width-400">
-    <div class='col top'>
+<div class="row center-block card-layout m-h-500 w-400">
+    <div class='col top text-align-center'>
         <h3>{{word.name}}</h3>
     </div>
-    <div class='col bottom'>
+    <div class='col top text-primary f-25'>
         {{word.meaning}}
+    </div>
+    <div class='col bottom text-info f-25'>
+        {{#each word.synonyms}}
+            &nbsp{{this}},
+        {{/each}}
     </div>
 </div>
 {{partial "layout/navigation"}}
