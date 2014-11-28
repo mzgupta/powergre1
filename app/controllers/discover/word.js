@@ -31,6 +31,29 @@ export default Ember.Controller.extend({
                 this.set('highlight',true);
             }
 
+        },
+
+        drop: function () {
+
+            var parentController = this.parentController,
+                hotWord = parentController.get('hotWord');
+
+            if(hotWord){
+                if(hotWord.get('model.word.id') === this.get('model.word.id')){
+                    this.set('hide',true);
+                    hotWord.set('hide',true);
+                    parentController.set('hotWord',null);
+                }
+            }
+            else{
+                parentController.set('hotWord',this);
+            }
+
+        },
+
+        reset: function (){
+            var parentController = this.parentController;
+            parentController.set('hotWord',null);
         }
     }
 });

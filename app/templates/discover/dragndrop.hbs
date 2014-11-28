@@ -3,13 +3,15 @@
     {{#each hotWord in hotWords itemController="discover/word"}}
        {{#with hotWord}}
         <div class="col-md-6 mb-15">
-          <div {{bind-attr class=":set highlight:highlight hide:invisible"}}{{action 'hotSelect'}}>
-            {{#if hotWord.model.flip}}
-                {{hotWord.model.word.name}}
-            {{else}}
-                {{hotWord.model.word.meaning}}
-            {{/if}}
-          </div>
+            {{#mz-draggable word=hotWord.model startDragAction="drop" dropAction="drop" dragEndAction="reset"}}
+            <div {{bind-attr class=":set highlight:highlight hide:invisible"}}>
+              {{#if hotWord.model.flip}}
+                  {{hotWord.model.word.name}}
+              {{else}}
+                  {{hotWord.model.word.meaning}}
+              {{/if}}
+            </div>
+            {{/mz-draggable}}
         </div>
          {{/with}}
     {{/each}}
